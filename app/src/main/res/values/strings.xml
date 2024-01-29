@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fake Posts</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="posts">Posts</string>
+    <string name="detailed_post">Detailed Post</string>
 </resources>

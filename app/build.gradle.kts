@@ -3,6 +3,10 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id ("kotlin-kapt")
     id ("com.google.dagger.hilt.android")
+    id("androidx.navigation.safeargs")
+
+
+
 
 }
 
@@ -19,7 +23,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures{
+        viewBinding = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -60,6 +66,8 @@ dependencies {
     //Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation ("com.airbnb.android:lottie:3.4.0")
 
 
 

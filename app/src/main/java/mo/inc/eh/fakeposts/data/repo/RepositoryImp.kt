@@ -7,22 +7,23 @@ import mo.inc.eh.fakeposts.data.datasource.RemoteSource
 import mo.inc.eh.fakeposts.data.model.PostResponse
 import mo.inc.eh.fakeposts.domain.entity.Post
 import mo.inc.eh.fakeposts.domain.repo.Repository
+import mo.inc.eh.fakeposts.module.network.PostService
 import javax.inject.Inject
 
 class RepositoryImp @Inject constructor(
-    private val remoteSource: RemoteSource,
+    private val postService: PostService,
 ) : Repository {
-    override suspend fun getPosts(): Flow<PostResponse> {
+    override suspend fun getPosts(): Flow<List<Post>> {
 
         return flow {
-            val posts = remoteSource.getPosts()
+            val posts = postService.getPosts()
             emit(posts)
         }
     }
 
     override suspend fun getPostInDetails(postId: Int): Flow<Post> {
         return flow {
-            val post = remoteSource.getPostInDetailed(postId)
+            val post = postService.getPostDetails(postId)
             emit(post)
         }
     }
