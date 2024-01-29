@@ -1,22 +1,19 @@
 package mo.inc.eh.fakeposts.presentation.posts.fragment
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import mo.inc.eh.fakeposts.data.model.PostResponse
 import mo.inc.eh.fakeposts.databinding.FragmentPostsBinding
 import mo.inc.eh.fakeposts.domain.entity.Post
-import mo.inc.eh.fakeposts.presentation.posts.adapters.OnItemClickListener
+import mo.inc.eh.fakeposts.presentation.posts.interfaces.OnItemClickListener
 import mo.inc.eh.fakeposts.presentation.posts.adapters.PostsAdapter
 import mo.inc.eh.fakeposts.presentation.posts.viewmodel.PostsViewModel
 import mo.inc.eh.fakeposts.utils.UiState

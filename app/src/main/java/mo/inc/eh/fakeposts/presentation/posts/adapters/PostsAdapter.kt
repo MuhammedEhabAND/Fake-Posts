@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import mo.inc.eh.fakeposts.databinding.FragmentPostsBinding
 import mo.inc.eh.fakeposts.databinding.PostItemLayoutBinding
 import mo.inc.eh.fakeposts.domain.entity.Post
+import mo.inc.eh.fakeposts.presentation.posts.interfaces.OnItemClickListener
 
 
 class PostsAdapter(
